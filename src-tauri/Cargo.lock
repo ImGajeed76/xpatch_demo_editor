@@ -5124,9 +5124,9 @@ dependencies = [
 
 [[package]]
 name = "xpatch"
-version = "0.2.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9778f1d813013d6bcce3cd7696aeeb9d5dde65e58096c6d2beb57815bee6979"
+checksum = "92c3e7f67b219ede65877cc448ff7efa21107935efc7ce09c9ead6a75e33f3a5"
 dependencies = [
  "gdelta",
  "num_enum",
