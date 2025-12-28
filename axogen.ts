@@ -15,6 +15,26 @@ export default defineConfig({
                     outputPrefix: "DEV",
                 });
             },
-        })
+        }),
+        "build:ubuntu": cmd({
+            help: "Build for Ubuntu (AppImage + .deb) using Docker",
+            exec: async () => {
+                // Build Docker image
+                await liveExec(
+                    "docker build -f Dockerfile.ubuntu-build -t tauri-ubuntu-builder .",
+                    { outputPrefix: "DOCKER-BUILD" }
+                );
+
+                // Build the app
+                await liveExec(
+                    `docker run --rm \
+                -v $(pwd):/app:z \
+                -w /app \
+                tauri-ubuntu-builder \
+                sh -c 'export PATH=/root/.cargo/bin:/root/.bun/bin:\$PATH && bun install && bun run tauri build'`,
+                    { outputPrefix: "BUILD" }
+                );
+            },
+        }),
     }
 })
