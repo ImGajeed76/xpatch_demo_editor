@@ -117,3 +117,4 @@ what's possible with xpatch—if you have ideas for cooler features, let's build
 - [xpatch](https://github.com/ImGajeed76/xpatch) - The delta compression library powering this demo
 - [axogen](https://github.com/axonotes/axogen) - Build tool that makes Tauri development smoother
 - [gdelta](https://github.com/ImGajeed76/gdelta) - General-purpose delta compression used by xpatch
+- [Check it out on my website](https://oseifert.ch/projects/xpatch-demo-editor-1115)
